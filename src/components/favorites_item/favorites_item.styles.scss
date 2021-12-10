@@ -1,0 +1,121 @@
+@mixin flexDesign {
+    display: flex;
+    align-items: center;
+}
+
+.favorites-item {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "top1 top2  top3 top4 top5 top6"
+        "middle1 middle middle middle middle middle"
+        "bottom bottom bottom bottom bottom bottom";
+    //justify-content: center;
+    //grid-gap: 7px;
+    padding: 7px 0;
+    //column-gap: 0px;
+    //column-width: 5px;
+    //border: 1px solid red;
+
+    .favorites-item-image-div {
+        grid-area: top1;
+
+        .favorites-item-image {
+            width: 200px;
+        }
+    }
+
+    .favorites-item-title {
+        //width: 100%;
+        //padding-left: 11px;
+        grid-area: top2;
+        //text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //border: 1px solid red;
+
+        //@include: 1px solid red;
+    }
+
+    .favorites-item-price {
+        grid-area: top3;
+        padding-left: 11px;
+    }
+
+    .favorites-item-icons {
+        grid-area: top6;
+        //width: fit-content;
+        //border: 1px solid red;
+
+        /*.add-to-fav-btn {
+            padding: 11px;
+            border-radius: 11px;
+            border: none;
+            font-weight: bold;
+            margin: 11px;
+            cursor: pointer;
+        }*/
+        .remove-from-fav-icon {
+            margin: 11px;
+            cursor: pointer;
+            // border: 1px solid red;
+        }
+
+        .add-to-cart-icon {
+            //border: 1px solid red;
+            margin: 11px;
+            cursor: pointer;
+        }
+    }
+
+    .fv {
+        //text-align: center;
+        //border: 1px solid red;
+        font-size: 21px;
+
+        @include flexDesign();
+
+        //justify-content: center;
+        //width: fit-content;
+    }
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+    .favorites-item {
+        .favorites-item-image-div {
+
+            .favorites-item-image {
+                width: auto;
+                height: 17vh;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .favorites-item {
+        .favorites-item-image-div {
+            //display: block;
+
+            .favorites-item-image {
+                width: auto;
+                height: 11vh;
+            }
+        }
+
+        .favorites-item-title {
+            grid-area: middle1;
+            width: fit-content;
+        }
+
+        .favorites-item-icons {
+
+            .add-to-cart-icon {
+                margin: 0;
+            }
+        }
+    }
+}

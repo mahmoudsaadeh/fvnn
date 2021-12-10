@@ -1,0 +1,20 @@
+
+.all-items-overview {
+    padding: 11px;
+}
+
+.all-items-overview-items {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.all-items-overview-title {
+    text-transform: capitalize;
+    margin-bottom: 17px;
+    border: 1px solid black;
+    background-color: #FBF27C;
+    border-radius: 17px;
+    text-align: center;
+    padding: 11px;
+}

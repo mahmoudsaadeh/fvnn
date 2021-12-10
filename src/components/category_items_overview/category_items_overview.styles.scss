@@ -1,0 +1,24 @@
+
+.items-overview {
+    padding: 11px;
+}
+
+.overview-items {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.overview-title {
+    text-transform: capitalize;
+    margin-bottom: 17px;
+    border: 1px solid black;
+    background-color: #FBF27C;
+    border-radius: 17px;
+    text-align: center;
+    padding: 11px;
+}
+
+.overview-item {
+    //margin-right: 8px;
+}

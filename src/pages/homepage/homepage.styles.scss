@@ -1,0 +1,15 @@
+.homepage {
+    //background-color: #FBF27C;
+    padding: 0 1pc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 870px) {
+    .homepage {
+        display: flex;
+        
+        flex-wrap: wrap;
+    }
+}
